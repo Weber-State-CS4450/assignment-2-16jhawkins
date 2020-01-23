@@ -4,7 +4,9 @@ on: [push]
 
 jobs:
   build:
-
+    env: 
+      super_secret: ${{ secrets.SeverName }}
+    
     runs-on: ubuntu-latest
     
     steps:
