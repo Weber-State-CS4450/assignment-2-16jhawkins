@@ -15,4 +15,9 @@ jobs:
       run: cmake --build build
     - name: test
       run: cd build && ctest
+    - name: Print out results
+      shell: bash
+      run: |
+        value = main
+        echo The resut is $value
 
