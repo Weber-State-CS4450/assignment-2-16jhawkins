@@ -3,13 +3,10 @@ name: C/C++ CI
 on: [push]
 
 jobs:
-  build:
-    env: 
-      super_secret: ${{ secrets.SeverName }}
-    
+  build-and-run:
+    name: Build and Run
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v1
-    - name: main
-      run: main.cpp
+    - name: Build Code
