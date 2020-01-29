@@ -7,6 +7,7 @@ add_executable(main main.cpp)
 
 install(TARGETS main)
 
+ctest[-V]
+
 enable_testing()
-ctest --verbose
 add_test(NAME main COMMAND main)
