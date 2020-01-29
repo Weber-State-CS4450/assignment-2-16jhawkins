@@ -3,10 +3,16 @@ name: C/C++ CI
 on: [push]
 
 jobs:
-  build-and-run:
-    name: Build and Run
+  build-ubuntu:
+
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v1
-    - name: Build Code
+    - name: configure
+      run: mkdir build && cd build && cmake -DCMAKE_CXX_FLAGS="-Werror" ..
+    - name: build
+      run: cmake --build build
+    - name: test
+      run: cd build && ctest
+
