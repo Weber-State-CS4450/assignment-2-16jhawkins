@@ -18,6 +18,6 @@ jobs:
     - name: Print out results
       shell: bash
       run: |
-        value = main
+        value = 'main'
         echo The resut is $value
 
