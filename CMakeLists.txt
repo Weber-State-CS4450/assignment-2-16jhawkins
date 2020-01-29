@@ -9,5 +9,3 @@ install(TARGETS main)
 
 enable_testing()
 add_test(NAME main COMMAND main)
-
-ctest -V -R main
